@@ -1,0 +1,9 @@
+---
+- name: docker run rancher
+  docker_container:
+    name: rancher
+    image: rancher/rancher
+    state: present
+    ports:
+      - "80:80"
+      - "443:443"

@@ -1,0 +1,13 @@
+---
+- hosts: rancher
+  remote_user: root
+  gather_facts: false
+  roles:
+   - docker
+   - rancher
+
+- hosts: nodes
+  remote_user: root
+  gather_facts: false
+  roles:
+    - docker
